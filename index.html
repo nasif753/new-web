@@ -1,23 +1,178 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Nexis Gold</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Nexis Gold</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body style="margin:0;padding:50px;background:#111827;color:white;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto;text-align:center;height:100vh;display:flex;align-items:center;justify-content:center;flex-direction:column;">
-    <h1 style="font-size:3rem;color:#facc15;margin-bottom:1rem;">🔥 Nexis Gold</h1>
-    <p style="font-size:1.5rem;margin-bottom:2rem;">Premium Game Credits & Gift Cards</p>
-    <div style="width:60px;height:60px;border:4px solid #f3f4f6;border-top:4px solid #facc15;border-radius:50%;animation:spin 1s linear infinite;margin:0 auto 2rem;"></div>
-    <p style="font-size:1.2rem;margin-bottom:2rem;">Redirecting to nexisgold.com...</p>
-    <a href="https://www.nexisgold.com" style="background:#facc15;color:#111827;padding:1rem 2rem;font-size:1.2rem;font-weight:bold;text-decoration:none;border-radius:9999px;display:inline-block;" target="_blank">🌐 Visit NexisGold.com</a>
-    <script>
-        setTimeout(function(){
-            window.open('https://www.nexisgold.com','_blank');
-        }, 3000);
-    </script>
-    <style>
-        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-    </style>
+
+<body class="bg-gray-950 text-white">
+
+<!-- NAV -->
+<nav class="flex justify-between items-center px-8 py-4 bg-gray-900">
+  <h1 class="text-2xl font-bold text-yellow-400">Nexis Gold</h1>
+</nav>
+
+<!-- HERO -->
+<section class="text-center py-20">
+  <h2 class="text-5xl font-bold mb-4">The Masterpiece of Digital Wealth</h2>
+  <p class="text-gray-300 mb-6">
+    💳 Digital Assets<br>
+    🎮 Game Currency & Gift Cards<br>
+    🔒 Safe & Fast Delivery
+  </p>
+  <a href="https://www.facebook.com/profile.php?id=61583888620050" target="_blank"
+     class="bg-yellow-500 text-black px-6 py-3 rounded-xl">
+    Get Your Credits Now
+  </a>
+</section>
+
+<!-- PRODUCTS -->
+<section class="py-16 px-8">
+  <h3 class="text-3xl text-center mb-10">Products</h3>
+  <div class="grid md:grid-cols-3 gap-6">
+
+    <!-- PRODUCT -->
+    <div class="bg-gray-900 p-6 rounded-xl">
+      <h4>PUBG UC</h4>
+      <button onclick="openModal('PUBG UC')" class="mt-3 bg-yellow-500 px-4 py-2 rounded">
+        Buy Now
+      </button>
+    </div>
+
+    <div class="bg-gray-900 p-6 rounded-xl">
+      <h4>Call of Duty CP</h4>
+      <button onclick="openModal('Call of Duty CP')" class="mt-3 bg-yellow-500 px-4 py-2 rounded">
+        Buy Now
+      </button>
+    </div>
+
+    <div class="bg-gray-900 p-6 rounded-xl">
+      <h4>Genshin Impact</h4>
+      <button onclick="openModal('Genshin Impact')" class="mt-3 bg-yellow-500 px-4 py-2 rounded">
+        Buy Now
+      </button>
+    </div>
+
+    <div class="bg-gray-900 p-6 rounded-xl">
+      <h4>Mobile Legends</h4>
+      <button onclick="openModal('Mobile Legends')" class="mt-3 bg-yellow-500 px-4 py-2 rounded">
+        Buy Now
+      </button>
+    </div>
+
+    <div class="bg-gray-900 p-6 rounded-xl">
+      <h4>Roblox</h4>
+      <button onclick="openModal('Roblox')" class="mt-3 bg-yellow-500 px-4 py-2 rounded">
+        Buy Now
+      </button>
+    </div>
+
+    <div class="bg-gray-900 p-6 rounded-xl">
+      <h4>Steam Wallet</h4>
+      <button onclick="openModal('Steam Wallet')" class="mt-3 bg-yellow-500 px-4 py-2 rounded">
+        Buy Now
+      </button>
+    </div>
+
+    <div class="bg-gray-900 p-6 rounded-xl">
+      <h4>Apple Gift Card</h4>
+      <button onclick="openModal('Apple Gift Card')" class="mt-3 bg-yellow-500 px-4 py-2 rounded">
+        Buy Now
+      </button>
+    </div>
+
+    <div class="bg-gray-900 p-6 rounded-xl">
+      <h4>Google Play Card</h4>
+      <button onclick="openModal('Google Play Card')" class="mt-3 bg-yellow-500 px-4 py-2 rounded">
+        Buy Now
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<!-- MODAL -->
+<div id="modal" class="hidden fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center">
+  <div class="bg-gray-900 p-6 rounded-xl w-80">
+    <h3 id="productTitle" class="mb-4"></h3>
+
+    <button onclick="buy()" class="block w-full mb-2 bg-gray-800 p-2 rounded hover:bg-yellow-500">
+      Buy Selected
+    </button>
+
+    <button onclick="closeModal()" class="w-full bg-gray-700 p-2 rounded">Cancel</button>
+  </div>
+</div>
+
+<!-- WHY PRICE -->
+<section class="py-16 px-8 text-center bg-gray-900">
+  <h3 class="text-3xl mb-4">Why Our Prices Are Higher</h3>
+  <p class="text-gray-300 max-w-2xl mx-auto">
+    We use trusted sources and safe methods. Cheaper sellers can risk your account.
+    With Nexis Gold you get speed, safety and reliability.
+  </p>
+</section>
+
+<!-- ABOUT -->
+<section class="py-16 text-center">
+  <h3 class="text-3xl mb-4">About Us</h3>
+  <p class="text-gray-300 max-w-2xl mx-auto">
+    Nexis Gold provides fast and secure game currency and gift cards.
+    Our goal is to deliver safely and build trust with every customer.
+  </p>
+</section>
+
+<!-- REVIEWS -->
+<section class="py-16 bg-gray-900 text-center">
+  <h3 class="text-3xl mb-6">Customer Reviews</h3>
+
+  <input id="name" placeholder="Your Name" class="p-2 text-black mb-2"><br>
+  <textarea id="review" placeholder="Your Review" class="p-2 text-black mb-2"></textarea><br>
+
+  <button onclick="addReview()" class="bg-yellow-500 px-4 py-2">Submit</button>
+
+  <div id="reviews" class="mt-6"></div>
+</section>
+
+<!-- PAYMENT -->
+<section class="py-16 text-center">
+  <h3 class="text-3xl mb-4">Payment Method</h3>
+  <p>Only bKash accepted</p>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-gray-900 text-center py-6">
+  <p>© 2026 Nexis Gold</p>
+  <p class="text-gray-400">Owned by Lumora</p>
+</footer>
+
+<script>
+let selected = "";
+
+function openModal(product) {
+  selected = product;
+  document.getElementById("modal").classList.remove("hidden");
+  document.getElementById("productTitle").innerText = product;
+}
+
+function closeModal() {
+  document.getElementById("modal").classList.add("hidden");
+}
+
+function buy() {
+  window.open("https://www.facebook.com/profile.php?id=61583888620050");
+}
+
+function addReview() {
+  let name = document.getElementById("name").value;
+  let text = document.getElementById("review").value;
+
+  let div = document.createElement("div");
+  div.innerHTML = `<p>"${text}" - ${name}</p>`;
+  document.getElementById("reviews").appendChild(div);
+}
+</script>
+
 </body>
 </html>
